@@ -1,0 +1,158 @@
+\section{Building the \rover{} Dataset}
+\label{sec:data}
+
+This section describes the construction of the \rover{} dataset.
+Dialog topics consist of prominent world geographic entities.
+The \emph{worldwide} spread of entities makes each novel to most users, the consistent topic type makes starting dialogs easier, and their rich histories, demographics, and economics add topical diversity.
+For example, most people are only vaguely familiar with the history of \topic{Puerto Rico}, but most know about related concepts such as the \entity{United States} or \entity{Hurricane Maria}.
+Section~\ref{sec:geo} describes how we select geographic topics, aspects, and derive a set of facts to ground against.
+We collected the dataset in two steps: (1) collecting dialogs with a custom interface (Section~\ref{sec:ints}) and (2) after-the-fact dialog act annotation (Section~\ref{sec:da}).
+Sample dialogs from \rover{} are in Appendix~\ref{apx:samples}.
+
+\subsection{Geographic Topics, Aspects, and Facts}
+\label{sec:geo}
+We select \ntopicsfull{} geographic pages from Wikipedia that have separate geography and history pages (e.g., \topic{Puerto Rico}, \entity{Geography of Puerto Rico}, and \entity{History of Puerto Rico}).\footnote{
+    The existence of these pages implies that the topic has ample historical and geographical knowledge to draw from.
+}
+We use sentences from each page to build a set of \nfactsfull{} facts.
+We run an entity linker over the content~\citep{gupta-etal-2017-entity} and index each fact by its source page (\topic{topic}), source section (\aspect{aspect}), and mentioned entities.
+Finally, we fit a \textsc{tf-idf} text matcher~\citep{rajaraman_ullman_2011} with Scikit-Learn~\citep{scikit-learn}.
+While conversing, assistants are shown facts filtered by topic, aspect, or mentioned entities, that are ranked by textual similarity to the dialog.
+
+\subsection{User and Assistant Dialog Interfaces}
+\label{sec:ints}
+
+To collect dialogs, we build user and assistant interfaces for annotators.
+The user's interface samples their prior knowledge of a topic, captures which assistant messages interest them, and manages the dialog context.
+The assistant's interface provides contextually relevant facts.
+Appendix~\ref{apx:int-photos} has screenshots and details of each interface component.
+
+\paragraph{Sampling User's Prior Knowledge}
+When deployed, digital assistants can draw from prior interactions~\citep{Ram2018ConversationalAT} to estimate what a user knows.
+However, since we do not have these prior interactions, we collect information about what users know.
+Instead of exhaustively asking about every entity related to the topic, we sample this knowledge.
+Before the dialog begins, we show the user fifteen related entities that range from commonplace to obscure (\entity{United States} versus \entity{Ta\'ino}).
+Users mark the entities they could (1) locate on a map or (2) summarize succinctly in one sentence.
+
+\paragraph{Like Button for User Interest}
+As part of our collection, we aimed to determine what fact-grounded utterances users found interesting.
+Users ``liked'' the assistant's message if they found it ``interesting, informative, and relevant to their topic.''
+
+\paragraph{Assistant's Topic Summary and Fact Bank}
+The worldwide spread of \rover{}'s entities makes them unfamiliar to most crowd-workers, including the assistants.
+So that the assistant can still engage the user, the assistant interface provides contextually relevant information.
+First, the interface shows a topic summary from Wikipedia.
+Second, the assistant paraphrases facts from a contextually updated fact bank (box 2 in Figure~\ref{fig:ex-dia}).
+To reduce information overload, we use simplified topic descriptions from SimpleWikipedia and show a maximum of nine facts at a time.\footnote{
+    If a description exists in \href{https://simple.wikipedia.org/}{simple.wikipedia.org}, we use that; otherwise, we use the description from \href{https://en.wikipedia.org/}{en.wikipedia.org}.}
+We encourage assistants to ``stimulate user interest and relate information to things they already know or have expressed interest in.''
+Assistants are instructed to select relevant facts, click the ``use'' button, and paraphrase the content into their next utterance.
+
+Like~\citet{dinan2019wizard}, the fact bank shows facts to the assistant using \tfidf{} textual similarity to recent dialog turns but differs by incorporating the user's prior knowledge.
+We show the assistant nine facts: three facts that mention an entity familiar to the user (rooted facts), three facts from their assigned aspects (aspect facts), and three from anywhere on the page (general facts).
+By construction, rooted facts overlap with the exclusive categories of aspect and general facts.
+For each category, we find the nine highest \abr{tf-idf} scoring facts and then randomize their order.
+To avoid biasing the assistant, we do not inform them about the user's known entities or distinguish between types of facts.
+
+
+\subsection{Dialog Act Annotation}
+\label{sec:da}
+
+Inducing structure on conversations through dialog acts is helpful for analysis and downstream models~\citep{tanaka-etal-2019-dialogue}.
+We introduce structure---beyond knowledge groundings---into \rover{} by annotating dialog acts for each message.
+
+In a separate collection, we annotate all utterances with dialogs acts using a custom interface~(Appendix~\ref{apx:acts}).
+The annotation schema is based on \abr{iso} $24617$-2~\citep{Bunt2010TowardsAI,Bunt2012ISO2A} with customized sub-categories for our scenario.
+Table~\ref{tbl:acts} shows our schema, descriptions, and examples.
+
+% feedback_ask 36
+% feedback_negative 176
+% feedback_positive 26946
+% inform_related 6981
+% inform_response 59269
+% inform_unrelated 557
+% offer_accept 1727
+% offer_aspect 1440
+% offer_decline 405
+% offer_followup 63
+% offer_other 1619
+% offer_topic 91
+% request_aspect 41701
+% request_followup 4463
+% request_other 10077
+% request_topic 10789
+% shift_aspect 201
+% social_apology 27
+% social_goodbye 90
+% social_greeting 200
+% social_thanking 399
+\begin{table*}[ht]
+    \centering
+    \small
+    \begin{tabular}{l r l l}
+        \toprule
+        \textbf{Dialog Act} & \textbf{Count} & \textbf{Description}                   & \textbf{Example}                                     \\
+        \midrule
+        request topic       & $10,789$       & A request primarily about the topic.   & I'd like to know about \topic{Puerto Rico}.          \\
+        request aspect      & $41,701$       & A request primarily about an aspect.   & Could you tell me about its \aspect{history}?        \\
+        request followup    & $4,463$        & A request about mentioned concept.     & Do you know more about the \entity{Ta\'inos}?        \\
+        request other       & $10,077$       & Requests on unmentioned concepts.      & What is there to know about cuisine?                 \\
+        \midrule
+        inform response     & $59,269$       & Directly answer an info request.       & \entity{Ta\'inos} were caribbean indigenous.         \\
+        inform related      & $6,981$        & Not a direct answer, but related info. & I do not know, but\ldots                             \\
+        inform unrelated    & $557$          & Does not answer question, not related. & Politics is tiring!                                  \\
+        \midrule
+        feedback positive   & $26,946$       & Provide positive feedback              & Thats quite interesting!                             \\
+        feedback negative   & $176$          & Provide negative feedback              & Thats pretty boring.                                 \\
+        feedback ask        & $36$           & Ask for feedback                       & Do you find \textless~info~\textgreater~interesting? \\
+        \midrule
+        offer topic         & $91$           & Offer to discuss topic                 & Want to learn about \topic{Puerto Rico}?             \\
+        offer aspect        & $1,440$        & Offer to discuss aspect                & How about more on its \aspect{demographics}?         \\
+        offer followup      & $63$           & Offer to discuss mentioned concept.    & I could say more about the \entity{Spanish}.         \\
+        offer other         & $1,619$        & Offer to discuss unmentioned concept.  & How about I tell you about its exports.              \\
+        offer accept        & $1,727$        & Accept offer of information.           & I'd love to learn about its \topic{history}.         \\
+        offer decline       & $405$          & Decline offer of information           & Sorry, I'm not interested in that.                   \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        Counts, abbreviated descriptions and examples of the dataset's dialog acts.
+    }
+    \label{tbl:acts}
+\end{table*}
+
+\subsection{Data Quality}
+\label{sec:collection}
+We crowd-sourced conversations in two phases using \parlai{}~\citep{miller2017parlai}.
+In the first, pilot studies collect feedback from individual workers.
+Based on feedback, we create task guidelines, sample dialogs, a \abr{faq}, tutorial videos, and qualification tests.
+These materials were used to train and qualify crowd-workers for the second phase.
+During the second, we monitor the interface usage and removed workers that ignored instructions.
+
+\begin{table}
+    \small
+    \centering
+    \begin{tabular}{ c c c }
+                             & Annotator 1 & Annotator 2 \\
+        \toprule
+        Utterance 1, Label A & Yes         & No          \\
+        Utterance 1, Label B & Yes         & No          \\
+        Utterance 2, Label A & Yes         & Yes         \\
+        Utterance 2, Label B & Yes         & Yes         \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        Consider a task where each utterance has labels A and B.
+        In the single-label version, each utterance is labeled as either A or B.
+        The table shows the outcome of converting the multi-label version to single-label by creating a row for each example--label combination.
+        Cell values are binary indicators.
+    }
+    \label{table:krip-multi}
+\end{table}
+
+Using Krippendorff's $\alpha$~\citep{kripp2004}, we validate the quality of dialog act annotations.
+Dialog acts are multi-class and multi-label: a message can have none, one, or multiple dialog acts (e.g., positive feedback and followup).
+However, Krippendorff's $\alpha$ is computed for single-label tasks from a table where rows represent examples, columns represent annotators, and cells indicate the singular class label.
+We convert our multi-label problem to a single label problem by making each combination of example and label class a row in the table (Table~\ref{table:krip-multi}).
+Since there are few dialog acts per utterance, most annotations agree; however, since Krippendorff's $\alpha$ focuses on disagreement, it is appropriate for this scenario.
+Using a separate annotation interface (Appendix~\ref{apx:acts}), we doubly annotate 4,408 dialogs and the agreement score \kripscore{} is higher than the 0.8 threshold recommended by \citet{kripp2004}.
+Next, we analyze the annotated dialogs and introduce our model.

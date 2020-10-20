@@ -1,0 +1,9 @@
+{
+  "verbatim": 68,
+  "paraphrase-correct": 111,
+  "paraphrase-error": 5,
+  "paraphrase-multiple": 17,
+  "cherrypick": 6,
+  "context": 30,
+  "unrelated": 13
+}

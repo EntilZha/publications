@@ -1,0 +1,14 @@
+{
+    "like_accuracy": 0.8209459459459459,
+    "like_loss": 0.4589749151227637,
+    "fact_mrr": 0.354040755099449,
+    "fact_loss": 0.9917125855543598,
+    "da_loss": 0,
+    "da_micro_f1": 0.0,
+    "da_micro_precision": 0.0,
+    "da_micro_recall": 0.0,
+    "policy_micro_f1": 0.0,
+    "policy_micro_precision": 0.0,
+    "policy_micro_recall": 0.0,
+    "loss": 3.4341126702587057
+}

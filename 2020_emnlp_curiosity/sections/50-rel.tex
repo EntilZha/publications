@@ -1,0 +1,67 @@
+\section{Related Work}
+\label{sec:rel}
+Our work builds on knowledge-grounded conversational datasets and modeling.
+
+\paragraph{Datasets} Although there are numerous grounded datasets, we did not find one for conversational information seeking that contained fine-grained knowledge groundings, message-level feedback from the user, and dialog acts.
+Table~\ref{tab:datasets} compares the \rover{} dataset to several others according to six factors: (1) is the goal of the task information seeking, (2) is the dataset collected from natural dialog with one participant always taking the role of an assistant, (3) are dialog responses constrained, (4) are document groundings annotated---as opposed to distantly supervised---and fine-grained, (5) is there message level feedback for the assistant, and (6) is the dataset annotated with dialog acts.
+
+\begin{table*}[t]
+    \centering
+    \small
+    \begin{tabular}{p{5.3cm}cccccc}
+        \toprule
+        \multicolumn{1}{c}{Dataset}                                &
+        \multicolumn{1}{p{1.15cm}}{\centering Info Seeking}        &
+        \multicolumn{1}{p{1.5cm}}{\centering Dialog w/Assistant}   &
+        \multicolumn{1}{p{1.3cm}}{\centering Free Response}        &
+        \multicolumn{1}{p{1.45cm}}{\centering Annotated Grounding} &
+        \multicolumn{1}{p{1.3cm}}{\centering Message Feedback}     &
+        \multicolumn{1}{p{1cm}}{\centering Dialog Acts}                                                                              \\
+        \midrule
+        \rover{} (ours)                                            & \cmark & \cmark & \cmark    & \cmark    & \cmark    & \cmark    \\
+        \midrule
+        {Topical Chat}~\citep{Gopal2019topical}                    & \cmark & \dmark & \cmark    & \cmark    & \cmark    & \dmark    \\
+        {Search as a Conversation}~\citep{ren2020search}           & \cmark & \cmark & \cmark    & \cmark    & \xmark    & \xmark    \\
+        {Wizard of Wikipedia}~\citep{dinan2019wizard}              & \cmark & \cmark & \cmark    & \cmark    & \xmark    & \xmark    \\
+        \quac{}~\citep{ChoiQuAC2018}                               & \cmark & \cmark & \xmark    & \cmark    & \xmark    & \dmark    \\
+        \abr{cmu dog}~\citep{Zhou2018ADF}                          & \cmark & \cmark & \cmark    & \dmark    & \xmark    & \xmark    \\
+        \abr{ms} {Marco Conv.}~\citep{Nguyen2016MSMA}              & \cmark & \xmark & \abr{n/a} & \abr{n/a} & \abr{n/a} & \abr{n/a} \\
+        \opendialkg{}~\citep{moon-etal-2019-opendialkg}            & \xmark & \cmark & \cmark    & \cmark    & \xmark    & \xmark    \\
+        \coqa{}~\citep{Reddy2018CoQAAC}                            & \xmark & \cmark & \dmark    & \cmark    & \xmark    & \xmark    \\
+        {Holl-E}~\citep{Moghe2018TowardsEB}                        & \xmark & \dmark & \cmark    & \cmark    & \xmark    & \xmark    \\
+        {Commonsense}~\citep{Zhou2018CommonsenseKA}                & \xmark & \xmark & \cmark    & \xmark    & \xmark    & \xmark    \\
+        {Reddit+Wiki}~\citep{Qin2019ConversingBR}                  & \xmark & \xmark & \cmark    & \xmark    & \xmark    & \xmark    \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \cmark~indicates a dataset has the feature,~\dmark~that it does with a caveat, and~\xmark~that it does not.
+        Conversational \abr{ms marco} is a search dataset but has inquiry chains we want assistants to induce (exemplar in Appendix~\ref{apx:marco}).
+        Topical Chat and Search as a Conversation are motivationally similar.
+        While our dataset's combination of (human) annotation is unique, all three datasets are steps forward in resources for conversational information-seeking.
+    }
+    \label{tab:datasets}
+\end{table*}
+
+
+Our dataset is most similar to those for information-seeking such as \quac{}~\citep{ChoiQuAC2018}, Wizard of Wikipedia~\citep[\wow{}]{dinan2019wizard}, \abr{cmu dog}~\citep{Zhou2018ADF}, \abr{ms marco}~\citep{Nguyen2016MSMA}, Topical Chat~\citep{Gopal2019topical}, the \abr{trec} Conversational Assistance track~\citep[\cast{}]{Dalton2020TRECC2}, and Search as a Conversation~\citep[\saac{}]{ren2020search}.
+\quac{} constrains assistant responses to spans from Wikipedia, which makes it better for conversational \emph{question answering}, but prevents more sophisticated assistant policies.
+\quac{} also provides dialog acts, but they exist so that the assistant can inform the user of valid actions; we annotate dialog acts after-the-fact so that we can compare \emph{freely chosen} user responses.
+Like \quac{}, Topical Chat, \saac{}, and \wow{} have annotated knowledge-groundings for each message, but responses are free-form.
+\saac{} is a contemporaneous, \cast{}-based dataset that shares our motivation to make conversation a medium for information-seeking.
+Topical Chat includes user feedback, but instead of explicitly defined roles, workers implicitly take dual and alternating roles as the user and assistant through knowledge asymmetry; followup work added automatically annotated dialog acts to Topical Chat~\citep{hedayatnia2020policy}.
+
+Many tasks instruct annotators to take on a specific role in the dialog.
+For example, in Wizard of Wikipedia, annotators assume an assigned persona~\citep{zhang-etal-2018-personalizing} in addition to being the user or assistant.
+Consequently, many dialogs revolve around personal discussions instead of teaching about a topic.
+Additionally, annotators may not have the background to play their role.
+In contrast, we ask annotators to take roles that---as humans---they already know how to do: read about and convey interesting information on a topic (assistant) and engage in inquiry about a novel topic (user).
+
+Our work is one of many in knowledge-grounded conversational datasets.
+For example, \citet{Moghe2018TowardsEB} have workers discuss movies and ground messages to plot descriptions, reviews, comments, and factoids; however, one worker plays both roles.
+In \opendialkg{}~\cite{moon-etal-2019-opendialkg}, annotators ground messages by path-finding through Freebase~\citep{Bast2014EasyAT} while discussing and recommending movies, books, sports, and music.
+\citet{Qin2019ConversingBR} use Reddit discussion threads as conversations and ground to web pages.
+Similarly, \citet{ghazvininejad2018a} collect Twitter three-turn threads and ground to Foursquare restaurant reviews.
+Our work adds to this dataset compendium.
+
+\paragraph{External Knowledge in Models} Our model is related to those that incorporate external information like facts in question answering~\citep{Weston2015MemoryN,Sukhbaatar2015EndToEndMN,kvnets2016}, knowledge base triples in dialog models~\citep{Han2015ExploitingKB,He2017LearningSC,Parthasarathi2018ExtendingNG}, common sense~\citep{Young2017AugmentingED,Zhou2018CommonsenseKA}, or task-specific knowledge~\citep{Eric2017KeyValueRN}.
+Similarly to~\citet{kalchbrenner-blunsom-2013-recurrent,khanpour-etal-2016-dialogue}, \charm{} predicts the act of the current message, but also next message's act like~\citet{tanaka-etal-2019-dialogue} do.

@@ -1,0 +1,41 @@
+\section{Modeling Experiments}
+\label{sec:exp}
+
+\charm{} improves over a \bert{} model in most tasks.
+
+\begin{table*}[t]
+    \small
+    \centering
+    \IfFileExists{2020_emnlp_curiosity/commit_auto_fig/experiment-table.tex}{\input{2020_emnlp_curiosity/commit_auto_fig/experiment-table}}{\input{2020_emnlp_curiosity/auto_fig/experiment-table}}
+    \caption{
+        The \charm{} model outperforms end-to-end \bert{} on most tasks.
+        We compare fact selection with \mrr{}, dialog act prediction with micro-averaged \fone{}, and like prediction with accuracy.
+        Ablating dialog history degrades context-dependent tasks (fact selection and policy act prediction), but not tasks more dependent on one message.
+    }
+    \label{tab:experiments}
+\end{table*}
+
+\subsection{Evaluation}
+We evaluate each sub-task with separate metrics.
+Fact selection is evaluated with mean reciprocal rank (\mrr{}).
+For utterances with at least one selected fact, we compute the \mrr{} using the selected facts as relevant documents.
+We compare like prediction with binary classification accuracy.
+For utterance and policy act prediction, we compare models with micro-averaged \fone{} scores so that frequent classes are weighted more heavily.
+For each metric, we report validation and test set scores.
+
+\subsection{Baselines}
+\bert{}~\citep{Devlin2018BERTPO} is a standard baseline for many \abr{nlp} tasks.
+We use a multi-task extension of an uncased \bert{} model as our primary baseline and fine-tune it for our unique set of tasks~(\mtbert).
+Specifically, we use the \abr{cls} representation of each utterance to replace the \hre{} representation as a time-distributed input to the same multi-task decoders~(Section \ref{subsec:method:task}).
+The context-less \charm{} ablation replaces the dialog contextualizer \abr{lstm} with a per-timestep projection layer.
+Lastly, we report majority class accuracy for classification tasks.
+
+\subsection{Discussion}
+
+The proposed \charm{} model for conversational curiosity is more effective than \mtbert{} for most of the tasks in \rover{} (Table~\ref{tab:experiments}).
+Specifically, \charm{} improves significantly in fact prediction ($13$ \mrr{} points) and both dialog act prediction tasks ($5$ \fone{} points), demonstrating the efficacy of the structural encoding of the various input modalities.
+Generally, models accurately predict utterance acts and likes, but their \mrr{} and \fone{} scores on fact selection and policy act prediction is comparatively worse.
+To a degree, this is expected since there is not always one best fact or one best action to take as the assistant; there may be various reasonable choices, which is common in information retrieval tasks.
+Nonetheless, models that specifically reason about the relationship between prior knowledge and entities would likely yield improvement.
+For example, \citet{Liu2018KnowledgeDF} predict the most relevant unmentioned entity while~\citet{Lian2019LearningTS} model a posterior distribution over knowledge.
+We leave these improvements to future work.

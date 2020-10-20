@@ -1,0 +1,9 @@
+\begin{tabular}{l r r r r r r r r r r r r}
+    \toprule                 & \multicolumn{2}{c}{Fact Rank (\textsc{mrr})} & \multicolumn{2}{c}{Utt. Act (\fone{})} & \multicolumn{2}{c}{Policy Act (\fone{})} & \multicolumn{2}{c}{Like (Accuracy)}                                                   \\
+    \cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+    Model                    & Val                                          & Test                                   & Val                                      & Test                                & Val   & Test           & Val   & Test           \\
+    \midrule  Majority Class & \abr{n/a}                                    & \abr{n/a}                              & 0.602                                    & 0.604                               & 0.491 & 0.494          & 0.690 & 0.681          \\
+    \abr{e2e} \bert{}        & 0.420                                        & 0.418                                  & 0.794                                    & 0.795                               & 0.635 & 0.631          & 0.829 & \textbf{0.822} \\
+    \charm{}                 & 0.546                                        & \textbf{0.546}                         & 0.845                                    & \textbf{0.847}                      & 0.682 & \textbf{0.682} & 0.826 & 0.815          \\
+    $-$ context              & 0.516                                        & 0.506                                  & 0.838                                    & 0.842                               & 0.664 & 0.664          & 0.824 & 0.820          \\
+    \bottomrule\end{tabular}

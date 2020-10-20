@@ -1,0 +1,4 @@
+PLOTTING ------------------------------------------------------
+2020_emnlp_curiosity
+/Users/pacrook/anaconda3/envs/curiosity/bin/python
+Running /Users/pacrook/anaconda3/envs/curiosity/bin/python

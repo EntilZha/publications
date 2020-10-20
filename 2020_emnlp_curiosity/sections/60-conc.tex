@@ -1,0 +1,18 @@
+\section{Future Work and Conclusion}
+\label{sec:fw}
+
+We see two immediate directions for future work.
+The first is to augment our \charm{} model with a text generation module to make a digital version of our human assistants.
+This involves contextualizing and paraphrasing facts which our dataset supports.
+Second, dialog act sequences could identify additional data-driven policies that could be used to define rewards or losses.
+By conditioning on dialog acts or sequences of dialog acts, textual outputs could be better-controlled~\citep{Sankar2019DeepRL,See2019WhatMA} and combined with knowledge grounding~\citep{hedayatnia2020policy}.
+However, text is not the native modality of digital assistants.
+
+We envision digital assistants participating in information-seeking, which means handling speech input.
+Consequently, automatic speech recognition (\abr{asr}) introduces transcription errors which are especially prevalent in knowledge-oriented text like question answering~\citep{peskov2019noisy}.
+\citet{gopalakrishnan2020asr} show this is also problematic in information-seeking dialog by comparing models on textual and \abr{asr} versions of Topical Chat.
+To close the loop in conversational information-seeking, models need to account for the speech-based environment of digital assistants.
+
+In summary, this work introduces \rover{}: a large-scale conversational information seeking dataset.
+With \rover{}'s unique set of annotations, we design \charm{} which jointly learns to choose facts, predict a policy for the next message, classify dialog acts of messages, and predict if a message will be liked.
+We hope that our dataset will encourage further interest in curiosity-driven dialog.

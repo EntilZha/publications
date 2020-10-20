@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "curiosity"
+version = "0.1.0"
+description = ""
+authors = ["Pedro Rodriguez <me@pedro.ai>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+plotnine = "^0.6.0"
+pandas = "^1.0.3"
+torch = "^1.4.0"
+scipy = "^1.4.1"
+numpy = "^1.18.2"
+sqlalchemy = "^1.3.15"
+click = "^7.1.1"
+jinja2 = "^2.11.1"
+krippendorff = "^0.3.2"
+mizani = "^0.6.0"
+pypdf2 = "^1.26.0"
+typer = "^0.3.2"
+
+[tool.poetry.dev-dependencies]
+black = {version = "^19.10b0", allow-prereleases = true}
+pylint = "^2.5.2"
+ipykernel = "^5.3.4"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

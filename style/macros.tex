@@ -1,0 +1,128 @@
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{multirow, varwidth}
+\usepackage{stfloats}
+\usepackage{verbatim}
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to underline.
+\makeatletter
+\newif\if@restonecol
+\makeatother
+\usepackage{xr}
+\usepackage[amsmath,thmmarks]{ntheorem}
+
+\def\mathbi#1{\textbf{\em #1}}
+
+% Definition
+\DeclareRobustCommand\onedot{\futurelet\@let@token\@onedot}
+\def\onedot{. }
+\def\eg{\emph{e.g}\onedot} \def\Eg{\emph{E.g}\onedot}
+\def\ie{\emph{i.e}\onedot} \def\Ie{\emph{I.e}\onedot}
+\def\cf{\emph{c.f}\onedot} \def\Cf{\emph{C.f}\onedot}
+\def\etc{\emph{etc}\onedot} \def\vs{\emph{vs}\onedot}
+\def\wrt{w.r.t\onedot} \def\dof{d.o.f\onedot}
+\def\etal{\emph{et al}\onedot}
+
+
+% curiosity specific
+\newcommand{\cis}{\textsc{cis}}
+\newcommand{\rover}{Curiosity}
+\newcommand{\bert}{\textsc{bert}}
+\newcommand{\mtbert}{\abr{e2e} \bert{}}
+
+\newcommand{\topic}[1]{\underline{#1}}
+\newcommand{\aspect}[1]{\textit{#1}}
+\newcommand{\entity}[1]{\dashuline{#1}}
+\newcommand{\nicebox}[1]{\tikz\node[draw=white!40!black,inner sep=1pt,line width=0.3mm,rounded corners=0.1cm]{#1};}
+
+% These are overriden by the auto-generated dataset stats tex file
+\newcommand{\nfactsfull}{0}
+\newcommand{\ndialogsfull}{0}
+\newcommand{\nutterfull}{0}
+\newcommand{\ntopicsfull}{0}
+\newcommand{\nshownfull}{0}
+\newcommand{\nusedfull}{0}
+\newcommand{\nlikedfull}{0}
+
+\newcommand{\nfactstrain}{0}
+\newcommand{\ndialogstrain}{0}
+\newcommand{\nuttertrain}{0}
+\newcommand{\ntopicstrain}{0}
+\newcommand{\nshowntrain}{0}
+\newcommand{\nusedtrain}{0}
+\newcommand{\nlikedtrain}{0}
+
+\newcommand{\nfactsval}{0}
+\newcommand{\ndialogsval}{0}
+\newcommand{\nutterval}{0}
+\newcommand{\ntopicsval}{0}
+\newcommand{\nshownval}{0}
+\newcommand{\nusedval}{0}
+\newcommand{\nlikedval}{0}
+
+\newcommand{\nfactstest}{0}
+\newcommand{\ndialogstest}{0}
+\newcommand{\nuttertest}{0}
+\newcommand{\ntopicstest}{0}
+\newcommand{\nshowntest}{0}
+\newcommand{\nusedtest}{0}
+\newcommand{\nlikedtest}{0}
+
+\newcommand{\nfactstestzero}{0}
+\newcommand{\ndialogstestzero}{0}
+\newcommand{\nuttertestzero}{0}
+\newcommand{\ntopicstestzero}{0}
+\newcommand{\nshowntestzero}{0}
+\newcommand{\nusedtestzero}{0}
+\newcommand{\nlikedtestzero}{0}
+
+\newcommand{\kripscore}{0.00}
+
+\newcommand{\daKnownFollowup}{0}
+\newcommand{\daKnownMissing}{0}
+\newcommand{\daKnownNoFollowup}{0}
+\newcommand{\daAspectFollowup}{0}
+\newcommand{\daAspectMissing}{0}
+\newcommand{\daAspectNoFollowup}{0}
+\newcommand{\daGeneralFollowup}{0}
+\newcommand{\daGeneralMissing}{0}
+\newcommand{\daGeneralNoFollowup}{0}
+\newcommand{\likeKnownLike}{0}
+\newcommand{\likeKnownNoLike}{0}
+\newcommand{\likeAspectLike}{0}
+\newcommand{\likeAspectNoLike}{0}
+\newcommand{\likeGeneralLike}{0}
+\newcommand{\likeGeneralNoLike}{0}
+
+\newcommand{\likeKnownAspectLike}{0}
+\newcommand{\likeKnownAspectNoLike}{0}
+\newcommand{\likeKnownGeneralLike}{0}
+\newcommand{\likeKnownGeneralNoLike}{0}
+\newcommand{\daKnownAspectFollowup}{0}
+\newcommand{\daKnownAspectNoFollowup}{0}
+\newcommand{\daKnownGeneralFollowup}{0}
+\newcommand{\daKnownGeneralNoFollowup}{0}
+
+\newcommand{\daKnownAspectNo}{0}
+\newcommand{\daKnownAspectYes}{0}
+\newcommand{\daKnownGeneralNo}{0}
+\newcommand{\daKnownGeneralYes}{0}
+\newcommand{\daAspectNo}{0}
+\newcommand{\daAspectYes}{0}
+\newcommand{\daGeneralNo}{0}
+\newcommand{\daGeneralYes}{0}
+\newcommand{\likeKnownAspectNo}{0}
+\newcommand{\likeKnownAspectYes}{0}
+\newcommand{\likeKnownGeneralNo}{0}
+\newcommand{\likeKnownGeneralYes}{0}
+\newcommand{\likeAspectNo}{0}
+\newcommand{\likeAspectYes}{0}
+\newcommand{\likeGeneralNo}{0}
+\newcommand{\likeGeneralYes}{0}

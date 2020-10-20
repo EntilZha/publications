@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+% Needed for arxiv
+\pdfoutput=1
+\usepackage[hyperref]{style/emnlp2020}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{anyfontsize}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\usepackage{csquotes}
+
+% Anonymity macros
+\aclfinalcopy % Uncomment this line for the final submission
+\def\aclpaperid{527} %  Enter the acl Paper ID here
+\newcommand{\dsurl}{\href{http://curiosity.pedro.ai}{curiosity.pedro.ai}}
+%%%%%%%%%%%%%%%%%%%%%%%% Author added %%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifcomment
+\commentfalse
+\include{style/preamble}
+\newcommand{\emailcustom}[2]{ {\small \href{mailto://#1}{\texttt{#2}}}}
+\include{style/macros}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/dataset-stats-full.tex}{\include{2020_emnlp_curiosity/auto_fig/dataset-stats-full}}{\include{2020_emnlp_curiosity/commit_auto_fig/dataset-stats-full}}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/dataset-stats-train.tex}{\include{2020_emnlp_curiosity/auto_fig/dataset-stats-train}}{\include{2020_emnlp_curiosity/commit_auto_fig/dataset-stats-train}}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/dataset-stats-val.tex}{\include{2020_emnlp_curiosity/auto_fig/dataset-stats-val}}{\include{2020_emnlp_curiosity/commit_auto_fig/dataset-stats-val}}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/dataset-stats-test.tex}{\include{2020_emnlp_curiosity/auto_fig/dataset-stats-test}}{\include{2020_emnlp_curiosity/commit_auto_fig/dataset-stats-test}}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/dataset-stats-testzero.tex}{\include{2020_emnlp_curiosity/auto_fig/dataset-stats-testzero}}{\include{2020_emnlp_curiosity/commit_auto_fig/dataset-stats-testzero}}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/krip-score.tex}{\include{2020_emnlp_curiosity/auto_fig/krip-score}}{\include{2020_emnlp_curiosity/commit_auto_fig/krip-score}}
+\IfFileExists{2020_emnlp_curiosity/auto_fig/student-prefs.tex}{\include{2020_emnlp_curiosity/auto_fig/student-prefs}}{\include{2020_emnlp_curiosity/commit_auto_fig/student-prefs}}
+% In order, prefer figures from
+% Hand made: figures
+% Auto generated and committed: commit_auto_fig
+% Auto generated: auto_fig
+% The concept is to promote auto_fig figures to commit_auto_fig
+% This is particularly important so that figures can appear in paper correctly
+% even if the builder of the paper doesn't have the data
+\graphicspath{{2020_emnlp_curiosity/figures/}{2020_emnlp_curiosity/commit_auto_fig/}{2020_emnlp_curiosity/auto_fig/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Information Seeking in the Spirit of Learning:\\A Dataset for Conversational Curiosity}
+
+\author{
+    Pedro Rodriguez\textsuperscript{\thanks{$^\star$Work done while interning at Facebook.}} \\
+    Computer Science\\
+    University of Maryland\\
+    \emaillink{pedro@cs.umd.edu}
+    \And
+    Paul Crook\\
+    Facebook \\
+    \emaillink{pacrook@fb.com}
+    \AND
+    Seungwhan Moon \\
+    Facebook \\
+    \emaillink{shanemoon@fb.com}
+    \And
+    Zhiguang Wang \\
+    Facebook \\
+    \emaillink{zgwang@fb.com}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+\setlength{\abovedisplayskip}{3pt}
+\setlength{\belowdisplayskip}{3pt}
+
+\begin{abstract}
+  \input{2020_emnlp_curiosity/sections/00-abstract}
+\end{abstract}
+
+\input{2020_emnlp_curiosity/sections/10-intro}
+\input{2020_emnlp_curiosity/sections/20-data}
+\input{2020_emnlp_curiosity/sections/25-analysis}
+\input{2020_emnlp_curiosity/sections/30-method}
+\input{2020_emnlp_curiosity/sections/40-exp}
+\input{2020_emnlp_curiosity/sections/50-rel}
+\input{2020_emnlp_curiosity/sections/60-conc}
+
+\input{2020_emnlp_curiosity/sections/80-acks}
+
+\bibliography{bib/journal-full,bib/pedro}
+\bibliographystyle{style/acl_natbib}
+\clearpage
+\begin{appendix}
+  \input{2020_emnlp_curiosity/sections/70-apx}
+\end{appendix}
+\end{document}
