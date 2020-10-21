@@ -43,7 +43,7 @@ If there are errors due to missing data, consult the readme for the particular p
 
 To use a screenreader to read the source, open the main file:
 
-> 2015_naacl_qb_coref.tex
+> 2020_emnlp_curiosity.tex
 
 And then follow the input commands to find any included files.
 
