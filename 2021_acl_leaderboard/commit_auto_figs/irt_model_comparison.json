@@ -1,0 +1,193 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelFontSize": 18,
+      "titleFontSize": 18
+    },
+    "header": {
+      "labelFontSize": 18
+    },
+    "legend": {
+      "labelFontSize": 18,
+      "titleFontSize": 18
+    }
+  },
+  "data": {
+    "name": "data-06221e2b0fb57a1a73d6e16a93d94406"
+  },
+  "facet": {
+    "column": {
+      "type": "nominal",
+      "field": "metric",
+      "title": ""
+    }
+  },
+  "spec": {
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "color": {
+            "type": "nominal",
+            "field": "model",
+            "legend": {
+              "orient": "top"
+            },
+            "scale": {
+              "scheme": "category10"
+            },
+            "title": "IRT Model"
+          },
+          "tooltip": {
+            "type": "quantitative",
+            "field": "value"
+          },
+          "x": {
+            "type": "nominal",
+            "axis": {
+              "labels": false
+            },
+            "field": "model",
+            "sort": [
+              "ROC AUC",
+              "Macro F1",
+              "Macro Precision",
+              "Macro Recall",
+              "Accuracy"
+            ],
+            "title": ""
+          },
+          "y": {
+            "type": "quantitative",
+            "field": "value",
+            "scale": {
+              "domain": [
+                0.8,
+                1
+              ],
+              "zero": false
+            },
+            "title": "Heldout Metric"
+          }
+        },
+        "height": 150,
+        "width": 100
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "middle",
+          "dy": -7,
+          "fontSize": 14
+        },
+        "encoding": {
+          "color": {
+            "value": "black"
+          },
+          "text": {
+            "type": "quantitative",
+            "field": "value",
+            "format": ".2r"
+          },
+          "tooltip": {
+            "type": "quantitative",
+            "field": "value"
+          },
+          "x": {
+            "type": "nominal",
+            "axis": {
+              "labels": false
+            },
+            "field": "model",
+            "sort": [
+              "ROC AUC",
+              "Macro F1",
+              "Macro Precision",
+              "Macro Recall",
+              "Accuracy"
+            ],
+            "title": ""
+          },
+          "y": {
+            "type": "quantitative",
+            "field": "value",
+            "scale": {
+              "domain": [
+                0.8,
+                1
+              ],
+              "zero": false
+            },
+            "title": "Heldout Metric"
+          }
+        },
+        "height": 150,
+        "width": 100
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-06221e2b0fb57a1a73d6e16a93d94406": [
+      {
+        "model": "1PL",
+        "evaluation": "heldout",
+        "metric": "ROC AUC",
+        "value": 0.9368308034826134
+      },
+      {
+        "model": "2PL",
+        "evaluation": "heldout",
+        "metric": "ROC AUC",
+        "value": 0.9441418476557721
+      },
+      {
+        "model": "3PL",
+        "evaluation": "heldout",
+        "metric": "ROC AUC",
+        "value": 0.9473473350387075
+      },
+      {
+        "model": "1PL",
+        "evaluation": "heldout",
+        "metric": "Macro F1",
+        "value": 0.8195759296723888
+      },
+      {
+        "model": "2PL",
+        "evaluation": "heldout",
+        "metric": "Macro F1",
+        "value": 0.8278082728919678
+      },
+      {
+        "model": "3PL",
+        "evaluation": "heldout",
+        "metric": "Macro F1",
+        "value": 0.8382733403964581
+      },
+      {
+        "model": "1PL",
+        "evaluation": "heldout",
+        "metric": "Accuracy",
+        "value": 0.8950176818933228
+      },
+      {
+        "model": "2PL",
+        "evaluation": "heldout",
+        "metric": "Accuracy",
+        "value": 0.8979524576785453
+      },
+      {
+        "model": "3PL",
+        "evaluation": "heldout",
+        "metric": "Accuracy",
+        "value": 0.9036650693674276
+      }
+    ]
+  }
+}

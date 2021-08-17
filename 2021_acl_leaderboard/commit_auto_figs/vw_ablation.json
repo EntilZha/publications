@@ -1,0 +1,478 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelFontSize": 25,
+      "titleFontSize": 25
+    },
+    "header": {
+      "labelFontSize": 25,
+      "titleFontSize": 25
+    },
+    "legend": {
+      "columns": 2,
+      "labelFontSize": 25,
+      "titleFontSize": 25
+    },
+    "title": {
+      "fontSize": 25
+    }
+  },
+  "hconcat": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "type": "nominal",
+          "field": "features",
+          "legend": {
+            "labelLimit": 0,
+            "symbolLimit": 0
+          },
+          "scale": {
+            "scheme": "category20"
+          },
+          "sort": [
+            "IRT-Vec",
+            "IRT-Feas",
+            "IRT-Disc",
+            "IRT-Base",
+            "LM All",
+            "LM +IRT",
+            "LM +Subj & Item IDs",
+            "LM +Item ID",
+            "LM +Subject ID",
+            "LM +Question",
+            "LM +Context",
+            "LM +Stats"
+          ],
+          "title": "Features"
+        },
+        "x": {
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -45,
+            "labels": false
+          },
+          "field": "features",
+          "sort": "-y",
+          "title": ""
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "value",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "title": ""
+        }
+      },
+      "title": "ROC AUC",
+      "transform": [
+        {
+          "filter": "(datum.metric === 'ROC AUC')"
+        }
+      ]
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "type": "nominal",
+          "field": "features",
+          "legend": {
+            "labelLimit": 0,
+            "symbolLimit": 0
+          },
+          "scale": {
+            "scheme": "category20"
+          },
+          "sort": [
+            "IRT-Vec",
+            "IRT-Feas",
+            "IRT-Disc",
+            "IRT-Base",
+            "LM All",
+            "LM +IRT",
+            "LM +Subj & Item IDs",
+            "LM +Item ID",
+            "LM +Subject ID",
+            "LM +Question",
+            "LM +Context",
+            "LM +Stats"
+          ],
+          "title": "Features"
+        },
+        "x": {
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -45,
+            "labels": false
+          },
+          "field": "features",
+          "sort": "-y",
+          "title": ""
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "value",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "title": ""
+        }
+      },
+      "title": "Macro F1",
+      "transform": [
+        {
+          "filter": "(datum.metric === 'Macro F1')"
+        }
+      ]
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "type": "nominal",
+          "field": "features",
+          "legend": {
+            "labelLimit": 0,
+            "symbolLimit": 0
+          },
+          "scale": {
+            "scheme": "category20"
+          },
+          "sort": [
+            "IRT-Vec",
+            "IRT-Feas",
+            "IRT-Disc",
+            "IRT-Base",
+            "LM All",
+            "LM +IRT",
+            "LM +Subj & Item IDs",
+            "LM +Item ID",
+            "LM +Subject ID",
+            "LM +Question",
+            "LM +Context",
+            "LM +Stats"
+          ],
+          "title": "Features"
+        },
+        "x": {
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -45,
+            "labels": false
+          },
+          "field": "features",
+          "sort": "-y",
+          "title": ""
+        },
+        "y": {
+          "type": "quantitative",
+          "field": "value",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "title": ""
+        }
+      },
+      "title": "Accuracy",
+      "transform": [
+        {
+          "filter": "(datum.metric === 'Accuracy')"
+        }
+      ]
+    }
+  ],
+  "data": {
+    "name": "data-c2d0c9a5958fd7e04ac9caf32a729a90"
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-c2d0c9a5958fd7e04ac9caf32a729a90": [
+      {
+        "features": "IRT-Base",
+        "irt": "Base",
+        "metric": "ROC AUC",
+        "value": 0.9368308034826134
+      },
+      {
+        "features": "IRT-Disc",
+        "irt": "Disc",
+        "metric": "ROC AUC",
+        "value": 0.9441418476557721
+      },
+      {
+        "features": "IRT-Feas",
+        "irt": "Feas",
+        "metric": "ROC AUC",
+        "value": 0.9473473350387075
+      },
+      {
+        "features": "IRT-Vec",
+        "irt": "Vec",
+        "metric": "ROC AUC",
+        "value": 0.9504854562252978
+      },
+      {
+        "features": "IRT-Base",
+        "irt": "Base",
+        "metric": "Macro F1",
+        "value": 0.8195759296723888
+      },
+      {
+        "features": "IRT-Disc",
+        "irt": "Disc",
+        "metric": "Macro F1",
+        "value": 0.8278082728919678
+      },
+      {
+        "features": "IRT-Feas",
+        "irt": "Feas",
+        "metric": "Macro F1",
+        "value": 0.8382733403964581
+      },
+      {
+        "features": "IRT-Vec",
+        "irt": "Vec",
+        "metric": "Macro F1",
+        "value": 0.8593360723537733
+      },
+      {
+        "features": "IRT-Base",
+        "irt": "Base",
+        "metric": "Accuracy",
+        "value": 0.8950176818933228
+      },
+      {
+        "features": "IRT-Disc",
+        "irt": "Disc",
+        "metric": "Accuracy",
+        "value": 0.8979524576785453
+      },
+      {
+        "features": "IRT-Feas",
+        "irt": "Feas",
+        "metric": "Accuracy",
+        "value": 0.9036650693674276
+      },
+      {
+        "features": "IRT-Vec",
+        "irt": "Vec",
+        "metric": "Accuracy",
+        "value": 0.9140178702211806
+      },
+      {
+        "features": "LM +Question",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.846404542753899
+      },
+      {
+        "features": "LM +Subj & Item ID",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.9266015799858025
+      },
+      {
+        "features": "LM +Item ID",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.8798940640107559
+      },
+      {
+        "features": "LM +Stats",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.6135349543746818
+      },
+      {
+        "features": "LM +Topics 1K",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.6251176280666983
+      },
+      {
+        "features": "LM +Title",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.5857212798421595
+      },
+      {
+        "features": "LM +Context",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.6576879454691136
+      },
+      {
+        "features": "LM +Subject ID",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.6645470121399165
+      },
+      {
+        "features": "LM +Baseline",
+        "irt": "no_irt_pl",
+        "metric": "ROC AUC",
+        "value": 0.5
+      },
+      {
+        "features": "LM +IRT",
+        "irt": "3PL",
+        "metric": "ROC AUC",
+        "value": 0.9364004354751654
+      },
+      {
+        "features": "LM All",
+        "irt": "3PL",
+        "metric": "ROC AUC",
+        "value": 0.9326724557091924
+      },
+      {
+        "features": "LM +Question",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.7436785793027852
+      },
+      {
+        "features": "LM +Subj & Item ID",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.817843198753361
+      },
+      {
+        "features": "LM +Item ID",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.7665406820481933
+      },
+      {
+        "features": "LM +Stats",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.4560049672624527
+      },
+      {
+        "features": "LM +Topics 1K",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.4462985867515562
+      },
+      {
+        "features": "LM +Title",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.4462985867515562
+      },
+      {
+        "features": "LM +Context",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.4715719088880783
+      },
+      {
+        "features": "LM +Subject ID",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.5079851282067743
+      },
+      {
+        "features": "LM +Baseline",
+        "irt": "no_irt_pl",
+        "metric": "Macro F1",
+        "value": 0.4462985867515562
+      },
+      {
+        "features": "LM +IRT",
+        "irt": "3PL",
+        "metric": "Macro F1",
+        "value": 0.8090704114822145
+      },
+      {
+        "features": "LM All",
+        "irt": "3PL",
+        "metric": "Macro F1",
+        "value": 0.8226031583453859
+      },
+      {
+        "features": "LM +Question",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8405961622967628
+      },
+      {
+        "features": "LM +Subj & Item ID",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8861348845968737
+      },
+      {
+        "features": "LM +Item ID",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8709064847559062
+      },
+      {
+        "features": "LM +Stats",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8062786415283852
+      },
+      {
+        "features": "LM +Topics 1K",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8060275377178848
+      },
+      {
+        "features": "LM +Title",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8060275377178848
+      },
+      {
+        "features": "LM +Context",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8049760405114148
+      },
+      {
+        "features": "LM +Subject ID",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8178712674464835
+      },
+      {
+        "features": "LM +Baseline",
+        "irt": "no_irt_pl",
+        "metric": "Accuracy",
+        "value": 0.8060275377178848
+      },
+      {
+        "features": "LM +IRT",
+        "irt": "3PL",
+        "metric": "Accuracy",
+        "value": 0.8919364288853083
+      },
+      {
+        "features": "LM All",
+        "irt": "3PL",
+        "metric": "Accuracy",
+        "value": 0.8877670593651259
+      }
+    ]
+  }
+}

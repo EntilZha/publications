@@ -1,0 +1,918 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    },
+    "padding": 0
+  },
+  "hconcat": [
+    {
+      "layer": [
+        {
+          "mark": "bar",
+          "encoding": {
+            "color": {
+              "type": "nominal",
+              "field": "label",
+              "legend": {
+                "offset": 0,
+                "orient": "left"
+              },
+              "scale": {
+                "scheme": "set2"
+              },
+              "title": "Description"
+            },
+            "x": {
+              "type": "quantitative",
+              "axis": {
+                "domain": false,
+                "grid": false,
+                "labels": false,
+                "ticks": false
+              },
+              "field": "n",
+              "title": ""
+            },
+            "y": {
+              "type": "nominal",
+              "axis": {
+                "labels": true,
+                "orient": "left",
+                "ticks": true
+              },
+              "field": "name",
+              "sort": [
+                "SA-Net on Albert ",
+                "RoBERTa ",
+                "BERT + Synthetic Self-Training ",
+                "ARSG-BERT ",
+                "Tree-LSTM + BiDAF + ELMo "
+              ],
+              "title": "Name"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "baseline": "middle",
+            "color": "black",
+            "dx": -12
+          },
+          "encoding": {
+            "text": {
+              "type": "quantitative",
+              "field": "test_em_percent"
+            },
+            "x": {
+              "type": "quantitative",
+              "axis": {
+                "orient": "top"
+              },
+              "field": "n",
+              "title": "Test Acc"
+            },
+            "y": {
+              "type": "nominal",
+              "field": "name",
+              "sort": [
+                "SA-Net on Albert ",
+                "RoBERTa ",
+                "BERT + Synthetic Self-Training ",
+                "ARSG-BERT ",
+                "Tree-LSTM + BiDAF + ELMo "
+              ]
+            }
+          }
+        }
+      ],
+      "data": {
+        "name": "data-8e9c99145802a56bc3d641c37cb4fee8"
+      },
+      "width": 25
+    },
+    {
+      "hconcat": [
+        {
+          "layer": [
+            {
+              "mark": {
+                "type": "rect",
+                "stroke": "black",
+                "strokeWidth": 0.1
+              },
+              "encoding": {
+                "color": {
+                  "type": "quantitative",
+                  "field": "response",
+                  "legend": {
+                    "offset": 0
+                  },
+                  "scale": {
+                    "scheme": "magma"
+                  },
+                  "title": "Dev Acc"
+                },
+                "x": {
+                  "type": "nominal",
+                  "axis": {
+                    "labelAngle": -35
+                  },
+                  "field": "category",
+                  "sort": [
+                    "Low",
+                    "Med-Low",
+                    "Med-High",
+                    "High"
+                  ],
+                  "title": ""
+                },
+                "y": {
+                  "type": "nominal",
+                  "axis": {
+                    "labels": false,
+                    "titlePadding": 10
+                  },
+                  "field": "name",
+                  "scale": {
+                    "paddingInner": 0.2
+                  },
+                  "sort": [
+                    "SA-Net on Albert ",
+                    "RoBERTa ",
+                    "BERT + Synthetic Self-Training ",
+                    "ARSG-BERT ",
+                    "Tree-LSTM + BiDAF + ELMo "
+                  ],
+                  "title": ""
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "baseline": "middle"
+              },
+              "encoding": {
+                "color": {
+                  "condition": {
+                    "value": "black",
+                    "test": "(datum.percent > 70)"
+                  },
+                  "value": "white"
+                },
+                "text": {
+                  "type": "quantitative",
+                  "field": "percent"
+                },
+                "x": {
+                  "type": "nominal",
+                  "field": "category",
+                  "sort": [
+                    "Low",
+                    "Med-Low",
+                    "Med-High",
+                    "High"
+                  ]
+                },
+                "y": {
+                  "type": "nominal",
+                  "field": "name",
+                  "sort": [
+                    "SA-Net on Albert ",
+                    "RoBERTa ",
+                    "BERT + Synthetic Self-Training ",
+                    "ARSG-BERT ",
+                    "Tree-LSTM + BiDAF + ELMo "
+                  ]
+                }
+              }
+            }
+          ],
+          "title": "Difficulty",
+          "transform": [
+            {
+              "filter": "(datum.parameter === 'Difficulty')"
+            }
+          ]
+        },
+        {
+          "layer": [
+            {
+              "mark": {
+                "type": "rect",
+                "stroke": "black",
+                "strokeWidth": 0.1
+              },
+              "encoding": {
+                "color": {
+                  "type": "quantitative",
+                  "field": "response",
+                  "legend": {
+                    "offset": 0
+                  },
+                  "scale": {
+                    "scheme": "magma"
+                  },
+                  "title": "Dev Acc"
+                },
+                "x": {
+                  "type": "nominal",
+                  "axis": {
+                    "labelAngle": -35
+                  },
+                  "field": "category",
+                  "sort": [
+                    "Low",
+                    "Med-Low",
+                    "Med-High",
+                    "High"
+                  ],
+                  "title": ""
+                },
+                "y": {
+                  "type": "nominal",
+                  "axis": {
+                    "labels": false,
+                    "titlePadding": 10
+                  },
+                  "field": "name",
+                  "scale": {
+                    "paddingInner": 0.2
+                  },
+                  "sort": [
+                    "SA-Net on Albert ",
+                    "RoBERTa ",
+                    "BERT + Synthetic Self-Training ",
+                    "ARSG-BERT ",
+                    "Tree-LSTM + BiDAF + ELMo "
+                  ],
+                  "title": ""
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "baseline": "middle"
+              },
+              "encoding": {
+                "color": {
+                  "condition": {
+                    "value": "black",
+                    "test": "(datum.percent > 70)"
+                  },
+                  "value": "white"
+                },
+                "text": {
+                  "type": "quantitative",
+                  "field": "percent"
+                },
+                "x": {
+                  "type": "nominal",
+                  "field": "category",
+                  "sort": [
+                    "Low",
+                    "Med-Low",
+                    "Med-High",
+                    "High"
+                  ]
+                },
+                "y": {
+                  "type": "nominal",
+                  "field": "name",
+                  "sort": [
+                    "SA-Net on Albert ",
+                    "RoBERTa ",
+                    "BERT + Synthetic Self-Training ",
+                    "ARSG-BERT ",
+                    "Tree-LSTM + BiDAF + ELMo "
+                  ]
+                }
+              }
+            }
+          ],
+          "title": "Discriminability",
+          "transform": [
+            {
+              "filter": "(datum.parameter === 'Discriminability')"
+            }
+          ]
+        }
+      ],
+      "data": {
+        "name": "data-33e25199c3dea589cec9c418cfaa5dfe"
+      }
+    }
+  ],
+  "spacing": 0,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-8e9c99145802a56bc3d641c37cb4fee8": [
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "name": "ARSG-BERT ",
+        "label": "Overfit",
+        "n": 1,
+        "test_em": 74.74610697359512,
+        "test_em_percent": 75
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "name": "SA-Net on Albert ",
+        "label": "Top Model",
+        "n": 1,
+        "test_em": 90.72444143534192,
+        "test_em_percent": 91
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "label": "Bottom Model",
+        "n": 1,
+        "test_em": 57.70706386820131,
+        "test_em_percent": 58
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "name": "RoBERTa ",
+        "label": "Hallmark",
+        "n": 1,
+        "test_em": 86.82013089596028,
+        "test_em_percent": 87
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "name": "BERT + Synthetic Self-Training ",
+        "label": "Hallmark",
+        "n": 1,
+        "test_em": 82.97224102911306,
+        "test_em_percent": 83
+      }
+    ],
+    "data-33e25199c3dea589cec9c418cfaa5dfe": [
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": "High",
+        "response": 0.4196157735085945,
+        "diff": -0.8724402340865413,
+        "disc": 3.0596764284025744,
+        "n": 1,
+        "category": "High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 42
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": "Low",
+        "response": 0.9504550050556118,
+        "diff": -3.006580250328303,
+        "disc": 3.992845144066338,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 95
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": "Med-High",
+        "response": 0.9124936772888215,
+        "diff": -1.8641573902809325,
+        "disc": 4.376633995720438,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 91
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": "Med-Low",
+        "response": 0.9646107178968655,
+        "diff": -2.348769822424415,
+        "disc": 4.1888031855572105,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 96
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": "High",
+        "response": 0.7912032355915066,
+        "diff": -0.8724402340865413,
+        "disc": 3.0596764284025744,
+        "n": 1,
+        "category": "High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 79
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": "Low",
+        "response": 0.9539939332659252,
+        "diff": -3.006580250328303,
+        "disc": 3.992845144066338,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 95
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": "Med-High",
+        "response": 0.9681335356600911,
+        "diff": -1.8641573902809325,
+        "disc": 4.376633995720438,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 97
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": "Med-Low",
+        "response": 0.9878665318503539,
+        "diff": -2.348769822424415,
+        "disc": 4.1888031855572105,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 99
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": "High",
+        "response": 0.18604651162790697,
+        "diff": -0.8724402340865413,
+        "disc": 3.0596764284025744,
+        "n": 1,
+        "category": "High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 19
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": "Low",
+        "response": 0.89737108190091,
+        "diff": -3.006580250328303,
+        "disc": 3.992845144066338,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 90
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": "Med-High",
+        "response": 0.42286292362164896,
+        "diff": -1.8641573902809325,
+        "disc": 4.376633995720438,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 42
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": "Med-Low",
+        "response": 0.7745197168857432,
+        "diff": -2.348769822424415,
+        "disc": 4.1888031855572105,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 77
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": "High",
+        "response": 0.8493427704752275,
+        "diff": -0.8724402340865413,
+        "disc": 3.0596764284025744,
+        "n": 1,
+        "category": "High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 85
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": "Low",
+        "response": 0.9843276036400405,
+        "diff": -3.006580250328303,
+        "disc": 3.992845144066338,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 98
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": "Med-High",
+        "response": 0.9731917046029337,
+        "diff": -1.8641573902809325,
+        "disc": 4.376633995720438,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 97
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": "Med-Low",
+        "response": 0.9863498483316482,
+        "diff": -2.348769822424415,
+        "disc": 4.1888031855572105,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 99
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": "High",
+        "response": 0.6289180990899899,
+        "diff": -0.8724402340865413,
+        "disc": 3.0596764284025744,
+        "n": 1,
+        "category": "High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 63
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": "Low",
+        "response": 0.9433771486349848,
+        "diff": -3.006580250328303,
+        "disc": 3.992845144066338,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 94
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": "Med-High",
+        "response": 0.9403136064744563,
+        "diff": -1.8641573902809325,
+        "disc": 4.376633995720438,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 94
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": "Med-Low",
+        "response": 0.9777553083923155,
+        "diff": -2.348769822424415,
+        "disc": 4.1888031855572105,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Difficulty",
+        "disc_cat": null,
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 98
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": null,
+        "response": 0.9433771486349848,
+        "diff": -2.1872724773187127,
+        "disc": 6.3257216409195305,
+        "n": 1,
+        "category": "High",
+        "parameter": "Discriminability",
+        "disc_cat": "High",
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 94
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": null,
+        "response": 0.5995955510616785,
+        "diff": -1.8228485089631636,
+        "disc": 1.3175621782051667,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Low",
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 60
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": null,
+        "response": 0.91350531107739,
+        "diff": -2.198720263039291,
+        "disc": 4.796488085598673,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-High",
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 91
+      },
+      {
+        "subject_id": "0x843f0d9f242f46b9803558614bff2f86",
+        "diff_cat": null,
+        "response": 0.7906976744186046,
+        "diff": -1.8832755897973859,
+        "disc": 3.1783991109493166,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-Low",
+        "name": "BERT + Synthetic Self-Training ",
+        "test_em": 82.97224102911306,
+        "percent": 79
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": null,
+        "response": 0.9848331648129424,
+        "diff": -2.1872724773187127,
+        "disc": 6.3257216409195305,
+        "n": 1,
+        "category": "High",
+        "parameter": "Discriminability",
+        "disc_cat": "High",
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 98
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": null,
+        "response": 0.7770475227502528,
+        "diff": -1.8228485089631636,
+        "disc": 1.3175621782051667,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Low",
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 78
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": null,
+        "response": 0.981284774911482,
+        "diff": -2.198720263039291,
+        "disc": 4.796488085598673,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-High",
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 98
+      },
+      {
+        "subject_id": "0x8978eb3bd032447a80f27b2b82ad3b80",
+        "diff_cat": null,
+        "response": 0.9580384226491405,
+        "diff": -1.8832755897973859,
+        "disc": 3.1783991109493166,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-Low",
+        "name": "SA-Net on Albert ",
+        "test_em": 90.72444143534192,
+        "percent": 96
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": null,
+        "response": 0.6243680485338726,
+        "diff": -2.1872724773187127,
+        "disc": 6.3257216409195305,
+        "n": 1,
+        "category": "High",
+        "parameter": "Discriminability",
+        "disc_cat": "High",
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 62
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": null,
+        "response": 0.4625884732052578,
+        "diff": -1.8228485089631636,
+        "disc": 1.3175621782051667,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Low",
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 46
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": null,
+        "response": 0.6742539200809307,
+        "diff": -2.198720263039291,
+        "disc": 4.796488085598673,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-High",
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 67
+      },
+      {
+        "subject_id": "0x8a3b01f4ded748df8b657684212372b4",
+        "diff_cat": null,
+        "response": 0.5197168857431749,
+        "diff": -1.8832755897973859,
+        "disc": 3.1783991109493166,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-Low",
+        "name": "Tree-LSTM + BiDAF + ELMo ",
+        "test_em": 57.70706386820131,
+        "percent": 52
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": null,
+        "response": 0.9848331648129424,
+        "diff": -2.1872724773187127,
+        "disc": 6.3257216409195305,
+        "n": 1,
+        "category": "High",
+        "parameter": "Discriminability",
+        "disc_cat": "High",
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 98
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": null,
+        "response": 0.8862487360970678,
+        "diff": -1.8228485089631636,
+        "disc": 1.3175621782051667,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Low",
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 89
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": null,
+        "response": 0.9782498735457764,
+        "diff": -2.198720263039291,
+        "disc": 4.796488085598673,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-High",
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 98
+      },
+      {
+        "subject_id": "0xa5265f8dbc424109a4573494c113235d",
+        "diff_cat": null,
+        "response": 0.9438827098078868,
+        "diff": -1.8832755897973859,
+        "disc": 3.1783991109493166,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-Low",
+        "name": "ARSG-BERT ",
+        "test_em": 74.74610697359512,
+        "percent": 94
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": null,
+        "response": 0.9752275025278059,
+        "diff": -2.1872724773187127,
+        "disc": 6.3257216409195305,
+        "n": 1,
+        "category": "High",
+        "parameter": "Discriminability",
+        "disc_cat": "High",
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 98
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": null,
+        "response": 0.6481294236602629,
+        "diff": -1.8228485089631636,
+        "disc": 1.3175621782051667,
+        "n": 1,
+        "category": "Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Low",
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 65
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": null,
+        "response": 0.9640870005058169,
+        "diff": -2.198720263039291,
+        "disc": 4.796488085598673,
+        "n": 1,
+        "category": "Med-High",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-High",
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 96
+      },
+      {
+        "subject_id": "0xeb6fe173849a495b83eb4e56b172e02a",
+        "diff_cat": null,
+        "response": 0.9029322548028311,
+        "diff": -1.8832755897973859,
+        "disc": 3.1783991109493166,
+        "n": 1,
+        "category": "Med-Low",
+        "parameter": "Discriminability",
+        "disc_cat": "Med-Low",
+        "name": "RoBERTa ",
+        "test_em": 86.82013089596028,
+        "percent": 90
+      }
+    ]
+  }
+}

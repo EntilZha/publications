@@ -14,6 +14,8 @@
 2020_emnlp_curiosity/data/wiki2vec_entity_100d.txt
 2020_emnlp_curiosity.paper.pdf
 2020_emnlp_curiosity.pdf
+2021_acl_leaderboard/auto_data/*
+2021_acl_leaderboard/auto_fig/*
 __pycache__
 .DS_Store
 *.pyc

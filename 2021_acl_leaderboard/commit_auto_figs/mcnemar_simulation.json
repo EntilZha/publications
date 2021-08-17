@@ -1,0 +1,1551 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    },
+    "header": {
+      "format": ".2f"
+    },
+    "legend": {
+      "orient": "top"
+    }
+  },
+  "data": {
+    "name": "data-6d0f5ead7b9e6ade7f11307d2b57d4a4"
+  },
+  "facet": {
+    "type": "nominal",
+    "field": "p_correct",
+    "title": "Probability of Correct"
+  },
+  "spec": {
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "color": "black"
+        },
+        "encoding": {
+          "strokeDash": {
+            "type": "nominal",
+            "field": "variable",
+            "title": "Measure"
+          },
+          "x": {
+            "type": "quantitative",
+            "field": "delta"
+          },
+          "y": {
+            "type": "quantitative",
+            "field": "value"
+          }
+        }
+      },
+      {
+        "mark": "point",
+        "encoding": {
+          "color": {
+            "type": "quantitative",
+            "field": "agreement",
+            "scale": {
+              "scheme": "viridis"
+            },
+            "title": "Probability of Agreement"
+          },
+          "shape": {
+            "type": "nominal",
+            "field": "variable",
+            "title": "Measure"
+          },
+          "x": {
+            "type": "quantitative",
+            "field": "delta",
+            "title": "Score Difference"
+          },
+          "y": {
+            "type": "quantitative",
+            "field": "value",
+            "title": "Measure Value"
+          }
+        }
+      }
+    ]
+  },
+  "columns": 4,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-6d0f5ead7b9e6ade7f11307d2b57d4a4": [
+      {
+        "delta": 0.0,
+        "agreement": 0.9049644000000001,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 0.018
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.9000043000000001,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 0.395
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.894956,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 0.924
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.890048,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 0.998
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.8849742,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.8799669999999999,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.875015,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.8700095999999999,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.8652953999999999,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.8598097,
+        "p_correct": 0.05,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.6798922000000001,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 0.028
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.6766682999999999,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 0.142
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.6734287000000001,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 0.466
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.6698162999999999,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 0.818
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.6664187999999999,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 0.97
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.6632051999999999,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 0.999
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.6604319000000001,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.6566147000000001,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.6532741,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.649858,
+        "p_correct": 0.2,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.5196929,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.024
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5191505999999999,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.121
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.5176359,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.318
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.5168359,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.661
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.5157662000000001,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.876
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.5143037999999999,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.967
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5131417,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 0.998
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.5122495,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5111962,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5100574,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.49989710000000004,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.024
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5001717999999999,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.111
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.4997552,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.321
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.5001327,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.646
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.49995100000000003,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.871
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.499873,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.978
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5003226000000001,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 0.997
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.4998975,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5002219999999999,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5001259,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.5201557,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.024
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5208128,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.122
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.522465,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.346
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.523311,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.675
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.5246362,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.909
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.5256428999999999,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.982
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5266063999999999,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 0.996
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.5274867000000001,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5287525,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5300826,
+        "p_correct": 0.6,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.6800799,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 0.03
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.6831645000000001,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 0.173
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.6867447,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 0.498
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.6900099000000001,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 0.853
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.6936042,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 0.979
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.6966267,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 0.999
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.6998648999999999,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.7032222,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.7066012,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.7101235,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.9049514000000001,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 0.02
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.9099343,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 0.444
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.9150446999999999,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 0.966
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.9197933,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.9249629,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.9301275000000001,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.9349848,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.9400436,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.9449649,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.9499099999999999,
+        "p_correct": 0.95,
+        "variable": "P(detect | true effect)",
+        "value": 1.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.9049644000000001,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.491
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.9000043000000001,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.04
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.894956,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.890048,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.8849742,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.8799669999999999,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.875015,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.8700095999999999,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.8652953999999999,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.8598097,
+        "p_correct": 0.05,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.6798922000000001,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.475
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.6766682999999999,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.192
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.6734287000000001,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.026
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.6698162999999999,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.006
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.6664187999999999,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.6632051999999999,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.6604319000000001,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.6566147000000001,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.6532741,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.649858,
+        "p_correct": 0.2,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.5196929,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.481
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5191505999999999,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.216
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.5176359,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.06
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.5168359,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.013
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.5157662000000001,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.001
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.5143037999999999,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5131417,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.5122495,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5111962,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5100574,
+        "p_correct": 0.39999999999999997,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.49989710000000004,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.495
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5001717999999999,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.211
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.4997552,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.054
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.5001327,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.008
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.49995100000000003,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.004
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.499873,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5003226000000001,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.4998975,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5002219999999999,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5001259,
+        "p_correct": 0.49999999999999994,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.5201557,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.487
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5208128,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.198
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.522465,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.047
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.523311,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.004
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.5246362,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.5256428999999999,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5266063999999999,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.5274867000000001,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5287525,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5300826,
+        "p_correct": 0.6,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.6800799,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.453
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.6831645000000001,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.16
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.6867447,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.029
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.6900099000000001,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.6936042,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.6966267,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.6998648999999999,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.7032222,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.7066012,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.7101235,
+        "p_correct": 0.7999999999999999,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.9049514000000001,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.5
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.9099343,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.033
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.9150446999999999,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.9197933,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.9249629,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.9301275000000001,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.9349848,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.9400436,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.9449649,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.9499099999999999,
+        "p_correct": 0.95,
+        "variable": "P(no detect | no effect)",
+        "value": 0.0
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.9049644000000001,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.2545
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.9000043000000001,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.2175
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.894956,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.462
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.890048,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.499
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.8849742,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.8799669999999999,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.875015,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.8700095999999999,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.8652953999999999,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.8598097,
+        "p_correct": 0.05,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.6798922000000001,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.2515
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.6766682999999999,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.16699999999999998
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.6734287000000001,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.24600000000000002
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.6698162999999999,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.412
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.6664187999999999,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.485
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.6632051999999999,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.4995
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.6604319000000001,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.6566147000000001,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.6532741,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.649858,
+        "p_correct": 0.2,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.5196929,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.2525
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5191505999999999,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.16849999999999998
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.5176359,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.189
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.5168359,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.337
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.5157662000000001,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.4385
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.5143037999999999,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.4835
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5131417,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.499
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.5122495,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5111962,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5100574,
+        "p_correct": 0.39999999999999997,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.49989710000000004,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.2595
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5001717999999999,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.161
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.4997552,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.1875
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.5001327,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.327
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.49995100000000003,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.4375
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.499873,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.489
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5003226000000001,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.4985
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.4998975,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5002219999999999,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5001259,
+        "p_correct": 0.49999999999999994,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.5201557,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.2555
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.5208128,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.16
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.522465,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.19649999999999998
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.523311,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.3395
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.5246362,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.4545
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.5256428999999999,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.491
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.5266063999999999,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.498
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.5274867000000001,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.5287525,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.5300826,
+        "p_correct": 0.6,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.6800799,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.2415
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.6831645000000001,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.16649999999999998
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.6867447,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.2635
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.6900099000000001,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.4265
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.6936042,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.4895
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.6966267,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.4995
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.6998648999999999,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.7032222,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.7066012,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.7101235,
+        "p_correct": 0.7999999999999999,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.0,
+        "agreement": 0.9049514000000001,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.26
+      },
+      {
+        "delta": 0.005555555555555556,
+        "agreement": 0.9099343,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.2385
+      },
+      {
+        "delta": 0.011111111111111112,
+        "agreement": 0.9150446999999999,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.483
+      },
+      {
+        "delta": 0.016666666666666666,
+        "agreement": 0.9197933,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.022222222222222223,
+        "agreement": 0.9249629,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.02777777777777778,
+        "agreement": 0.9301275000000001,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.03333333333333333,
+        "agreement": 0.9349848,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.03888888888888889,
+        "agreement": 0.9400436,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.044444444444444446,
+        "agreement": 0.9449649,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      },
+      {
+        "delta": 0.05,
+        "agreement": 0.9499099999999999,
+        "p_correct": 0.95,
+        "variable": "Average",
+        "value": 0.5
+      }
+    ]
+  }
+}

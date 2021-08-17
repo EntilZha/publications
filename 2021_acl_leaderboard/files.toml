@@ -1,0 +1,18 @@
+version = "0.1.0"
+
+[options]
+create_dirs = true
+directories = [
+    "2021_acl_leaderboard/auto_data/",
+]
+
+[downloads]
+
+"2021_acl_leaderboard/auto_data/wilcoxon.json" = "http://users.umiacs.umd.edu/~entilzha/isicle/data/stats/full/wilcoxon.json"
+"2021_acl_leaderboard/auto_data/mcnemar.json" = "http://users.umiacs.umd.edu/~entilzha/isicle/data/stats/full/mcnemar.json"
+"2021_acl_leaderboard/auto_data/student_t.json" = "http://users.umiacs.umd.edu/~entilzha/isicle/data/stats/full/student_t.json"
+"2021_acl_leaderboard/auto_data/sem.json" = "http://users.umiacs.umd.edu/~entilzha/isicle/data/stats/full/sem.json"
+"2021_acl_leaderboard/auto_data/see.json" = "http://users.umiacs.umd.edu/~entilzha/isicle/data/stats/full/see.json"
+
+
+[jobs]

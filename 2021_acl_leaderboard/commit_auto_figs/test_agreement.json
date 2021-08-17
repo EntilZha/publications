@@ -1,0 +1,351 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    }
+  },
+  "data": {
+    "name": "data-353e7f8cebd1312cdc15a7cdc6035dba"
+  },
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "agree",
+      "title": "Tests Agree?"
+    },
+    "column": {
+      "type": "nominal",
+      "field": "base_test",
+      "title": ""
+    },
+    "x": {
+      "type": "nominal",
+      "axis": {
+        "labelAngle": -45
+      },
+      "field": "compare_test",
+      "title": ""
+    },
+    "y": {
+      "type": "quantitative",
+      "field": "n",
+      "title": "Number of (Dis)Agreements"
+    }
+  },
+  "resolve": {
+    "scale": {
+      "x": "independent"
+    }
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-353e7f8cebd1312cdc15a7cdc6035dba": [
+      {
+        "base_test": "mcnemar",
+        "compare_test": "see",
+        "agree": "No",
+        "key": 1118,
+        "base_pvalue": 1118,
+        "n": 1118
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "see",
+        "agree": "Yes",
+        "key": 11756,
+        "base_pvalue": 11756,
+        "n": 11756
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "sem",
+        "agree": "No",
+        "key": 132,
+        "base_pvalue": 132,
+        "n": 132
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "sem",
+        "agree": "Yes",
+        "key": 12742,
+        "base_pvalue": 12742,
+        "n": 12742
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "student_t",
+        "agree": "No",
+        "key": 11,
+        "base_pvalue": 11,
+        "n": 11
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "student_t",
+        "agree": "Yes",
+        "key": 12863,
+        "base_pvalue": 12863,
+        "n": 12863
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "wilcoxon",
+        "agree": "No",
+        "key": 11,
+        "base_pvalue": 11,
+        "n": 11
+      },
+      {
+        "base_test": "mcnemar",
+        "compare_test": "wilcoxon",
+        "agree": "Yes",
+        "key": 12863,
+        "base_pvalue": 12863,
+        "n": 12863
+      },
+      {
+        "base_test": "see",
+        "compare_test": "mcnemar",
+        "agree": "No",
+        "key": 1118,
+        "base_pvalue": 1118,
+        "n": 1118
+      },
+      {
+        "base_test": "see",
+        "compare_test": "mcnemar",
+        "agree": "Yes",
+        "key": 11756,
+        "base_pvalue": 11756,
+        "n": 11756
+      },
+      {
+        "base_test": "see",
+        "compare_test": "sem",
+        "agree": "No",
+        "key": 1118,
+        "base_pvalue": 1118,
+        "n": 1118
+      },
+      {
+        "base_test": "see",
+        "compare_test": "sem",
+        "agree": "Yes",
+        "key": 11756,
+        "base_pvalue": 11756,
+        "n": 11756
+      },
+      {
+        "base_test": "see",
+        "compare_test": "student_t",
+        "agree": "No",
+        "key": 1125,
+        "base_pvalue": 1125,
+        "n": 1125
+      },
+      {
+        "base_test": "see",
+        "compare_test": "student_t",
+        "agree": "Yes",
+        "key": 11749,
+        "base_pvalue": 11749,
+        "n": 11749
+      },
+      {
+        "base_test": "see",
+        "compare_test": "wilcoxon",
+        "agree": "No",
+        "key": 1125,
+        "base_pvalue": 1125,
+        "n": 1125
+      },
+      {
+        "base_test": "see",
+        "compare_test": "wilcoxon",
+        "agree": "Yes",
+        "key": 11749,
+        "base_pvalue": 11749,
+        "n": 11749
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "mcnemar",
+        "agree": "No",
+        "key": 132,
+        "base_pvalue": 132,
+        "n": 132
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "mcnemar",
+        "agree": "Yes",
+        "key": 12742,
+        "base_pvalue": 12742,
+        "n": 12742
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "see",
+        "agree": "No",
+        "key": 1118,
+        "base_pvalue": 1118,
+        "n": 1118
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "see",
+        "agree": "Yes",
+        "key": 11756,
+        "base_pvalue": 11756,
+        "n": 11756
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "student_t",
+        "agree": "No",
+        "key": 127,
+        "base_pvalue": 127,
+        "n": 127
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "student_t",
+        "agree": "Yes",
+        "key": 12747,
+        "base_pvalue": 12747,
+        "n": 12747
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "wilcoxon",
+        "agree": "No",
+        "key": 127,
+        "base_pvalue": 127,
+        "n": 127
+      },
+      {
+        "base_test": "sem",
+        "compare_test": "wilcoxon",
+        "agree": "Yes",
+        "key": 12747,
+        "base_pvalue": 12747,
+        "n": 12747
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "mcnemar",
+        "agree": "No",
+        "key": 11,
+        "base_pvalue": 11,
+        "n": 11
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "mcnemar",
+        "agree": "Yes",
+        "key": 12863,
+        "base_pvalue": 12863,
+        "n": 12863
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "see",
+        "agree": "No",
+        "key": 1125,
+        "base_pvalue": 1125,
+        "n": 1125
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "see",
+        "agree": "Yes",
+        "key": 11749,
+        "base_pvalue": 11749,
+        "n": 11749
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "sem",
+        "agree": "No",
+        "key": 127,
+        "base_pvalue": 127,
+        "n": 127
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "sem",
+        "agree": "Yes",
+        "key": 12747,
+        "base_pvalue": 12747,
+        "n": 12747
+      },
+      {
+        "base_test": "student_t",
+        "compare_test": "wilcoxon",
+        "agree": "Yes",
+        "key": 12874,
+        "base_pvalue": 12874,
+        "n": 12874
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "mcnemar",
+        "agree": "No",
+        "key": 11,
+        "base_pvalue": 11,
+        "n": 11
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "mcnemar",
+        "agree": "Yes",
+        "key": 12863,
+        "base_pvalue": 12863,
+        "n": 12863
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "see",
+        "agree": "No",
+        "key": 1125,
+        "base_pvalue": 1125,
+        "n": 1125
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "see",
+        "agree": "Yes",
+        "key": 11749,
+        "base_pvalue": 11749,
+        "n": 11749
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "sem",
+        "agree": "No",
+        "key": 127,
+        "base_pvalue": 127,
+        "n": 127
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "sem",
+        "agree": "Yes",
+        "key": 12747,
+        "base_pvalue": 12747,
+        "n": 12747
+      },
+      {
+        "base_test": "wilcoxon",
+        "compare_test": "student_t",
+        "agree": "Yes",
+        "key": 12874,
+        "base_pvalue": 12874,
+        "n": 12874
+      }
+    ]
+  }
+}

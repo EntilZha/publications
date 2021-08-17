@@ -1,0 +1,215 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 400,
+      "continuousHeight": 300
+    },
+    "axis": {
+      "labelFontSize": 40,
+      "tickCount": 10,
+      "titleFontSize": 40
+    },
+    "header": {
+      "labelFontSize": 40,
+      "titleFontSize": 40
+    },
+    "legend": {
+      "columns": 3,
+      "labelFontSize": 40,
+      "labelLimit": 0,
+      "symbolLimit": 0,
+      "symbolSize": 400,
+      "titleFontSize": 40,
+      "titleLimit": 0
+    }
+  },
+  "data": {
+    "name": "data-0e53914f5ad4b3c1c952db076f9fa93e"
+  },
+  "mark": "bar",
+  "encoding": {
+    "color": {
+      "type": "nominal",
+      "field": "reason",
+      "legend": {
+        "orient": "bottom"
+      },
+      "scale": {
+        "scheme": "category20"
+      },
+      "sort": [
+        "None"
+      ],
+      "title": "Explanation"
+    },
+    "column": {
+      "type": "nominal",
+      "field": "param_category",
+      "title": ""
+    },
+    "x": {
+      "type": "nominal",
+      "axis": {
+        "labelAngle": -25
+      },
+      "field": "validity",
+      "title": ""
+    },
+    "y": {
+      "type": "quantitative",
+      "field": "n",
+      "title": "Count"
+    }
+  },
+  "height": 200,
+  "width": 300,
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "datasets": {
+    "data-0e53914f5ad4b3c1c952db076f9fa93e": [
+      {
+        "param_category": "Diff: High",
+        "validity": "Correct",
+        "reason": "None",
+        "n": 10
+      },
+      {
+        "param_category": "Diff: Low",
+        "validity": "Correct",
+        "reason": "None",
+        "n": 8
+      },
+      {
+        "param_category": "Diff: Low",
+        "validity": "Wrong",
+        "reason": "Is Answerable",
+        "n": 1
+      },
+      {
+        "param_category": "Diff: Low",
+        "validity": "Wrong",
+        "reason": "Is Answerable + Misleading",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: High",
+        "validity": "Correct",
+        "reason": "None",
+        "n": 8
+      },
+      {
+        "param_category": "Disc: High",
+        "validity": "Correct",
+        "reason": "One Answer Wrong",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: High",
+        "validity": "Flawed",
+        "reason": "Answer Partially Correct",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: \u22480",
+        "validity": "Correct",
+        "reason": "Ambiguous",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: \u22480",
+        "validity": "Correct",
+        "reason": "Incomplete Answer",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: \u22480",
+        "validity": "Correct",
+        "reason": "Misleading",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: \u22480",
+        "validity": "Correct",
+        "reason": "None",
+        "n": 6
+      },
+      {
+        "param_category": "Disc: \u22480",
+        "validity": "Correct",
+        "reason": "One Answer Wrong",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Correct",
+        "reason": "None",
+        "n": 2
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Flawed",
+        "reason": "Ambiguous + Missing Answer",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Flawed",
+        "reason": "Answer Partially Correct",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Flawed",
+        "reason": "Bad Question",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Flawed",
+        "reason": "Bad Question + Bad Answers",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Flawed",
+        "reason": "Incomplete Answer",
+        "n": 1
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Wrong",
+        "reason": "Is Answerable",
+        "n": 2
+      },
+      {
+        "param_category": "Disc: Neg",
+        "validity": "Wrong",
+        "reason": "No Answer",
+        "n": 1
+      },
+      {
+        "param_category": "IRT Val",
+        "validity": "Correct",
+        "reason": "High Probability + No Answer",
+        "n": 3
+      },
+      {
+        "param_category": "IRT Val",
+        "validity": "Correct",
+        "reason": "Low Probability",
+        "n": 1
+      },
+      {
+        "param_category": "IRT Val",
+        "validity": "Wrong",
+        "reason": "Answer Set Incomplete",
+        "n": 5
+      },
+      {
+        "param_category": "IRT Val",
+        "validity": "Wrong",
+        "reason": "Is Answerable",
+        "n": 1
+      }
+    ]
+  }
+}
